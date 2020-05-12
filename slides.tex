@@ -1,0 +1,67 @@
+\documentclass{beamer}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\usetheme{default}
+
+\newcommand{\diff}{\mathrm{d}}
+\DeclareMathOperator{\grad}{grad}
+
+\title{Методы Рунге-Кутта}
+\author{Залялов Александр, Лобанов Глеб, Солодовников Никита, \\ группа 183}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Постановка задачи}
+	Хотим решить систему
+	\[ \begin{cases} 
+		\frac{\diff y_1}{\diff t} = f_1(y_1, \ldots, y_n) \\
+		\frac{\diff y_2}{\diff t} = f_2(y_1, \ldots, y_n) \\
+		\vdots \\
+		\frac{\diff y_n}{\diff t} = f_n(y_1, \ldots, y_n)
+	\end{cases} \]
+	где $y_1, \ldots, y_n$ ---~ функции от $t$. В векторной форме:
+	\[\grad \vec{y} = f(\vec{y}) \]
+	Предполагаем известным начальное условие $\vec{y}(t_0) = \vec{y_0}$.
+\end{frame}
+
+\begin{frame}{Вид решения}
+	\[\vec{g}^{(i)} = f\left(\vec{y_0} + h\sum_{j = 1}^K a_{ij}\vec{g}^{(j)}\right); \]
+	\[\vec{y}(t_0 + h) \approx \vec{y_0} + h\sum_{i = 1}^K b_i \vec{g}^{(i)};  \]
+
+	\begin{itemize}
+		\item<1-> $K, a_{ij}, b_i$ ---~ заранее фиксированные константы.
+		\item<2-> В явных методах $a_{ij} = 0$ при $j \ge i$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{RK4}
+	\[ K = 4; \]
+	\[ a = \begin{pmatrix} 
+		0 & 0 & 0 & 0 \\
+		\frac{1}{2} & 0 & 0 & 0 \\
+		0 & \frac{1}{2} & 0 & 0 \\
+		0 & 0 & 1 & 0
+		\end{pmatrix}; \]
+	\[ b = \begin{pmatrix} \frac{1}{6} & \frac{1}{3} & \frac{1}{3} & \frac{1}{6} \end{pmatrix}. \]
+\end{frame}
+
+\begin{frame}{RK4}
+	\[ \vec{g}^{(1)} = f(\vec{y_0}); \]
+	\[ \vec{g}^{(2)} \approx f(\vec{y_0}) + \frac{h}{2}f'_t(\vec{y_0}); \]
+	\[ \vec{g}^{(3)} \approx f(\vec{y_0}) + \frac{h}{2}f'_t(\vec{y_0}) + \frac{h^2}{4}f''_{tt}(\vec{y_0}); \]
+	\[ \vec{g}^{(4)} \approx f(\vec{y_0}) + hf'_t(\vec{y_0}) + \frac{h^2}{2}f''_{tt}(\vec{y_0}) + \frac{h^3}{4}f'''_{ttt}(\vec{y_0});\]
+	\pause Линейной комбинацией этого собираем ряд Тейлора для $y$:
+	\[y \approx y_0 + hy' + \frac{h^2}{2}y'' + \frac{h^3}{6}y^{(3)} + \frac{h^4}{24}y^{(4)}. \]
+
+\end{frame}
+
+\end{document}
