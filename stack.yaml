@@ -39,7 +39,10 @@ packages:
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
-extra-deps: []
+extra-deps:
+- Chart-cairo-1.9.3
+- cairo-0.13.8.0
+- gtk2hs-buildtools-0.13.8.0
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
