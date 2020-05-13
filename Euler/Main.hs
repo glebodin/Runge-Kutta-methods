@@ -1,3 +1,4 @@
+module Main where
 import Graphics.Rendering.Chart.Easy
 import Graphics.Rendering.Chart.Backend.Cairo
 
@@ -30,5 +31,3 @@ main = do
     setColors [opaque red]
     plot (line "y(x)" [take (20 * 10) $ zip xs ys])
         where [(xs : ys : other)]
-
-	
