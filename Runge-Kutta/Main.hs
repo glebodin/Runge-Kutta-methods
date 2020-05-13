@@ -33,7 +33,7 @@ system [x, y, h] = [x', y', h']
         h' = (y - h) / (x - 0.5)
 
 system2 :: System
-system2 = System y' 0 [1, 1]
+system2 = System y' 0 [0, 1]
     where
         y1' [y1,y2] = 1
         y2' [y1,y2] = y2/y1
@@ -52,5 +52,5 @@ main = toFile def "runge.png" $ do
     setColors [opaque blue]
     let ys = (!!1) . getY0 <$> iterate (stepRK4 0.05) system3
     let xs = iterate (+0.05) (getT0 system2)
-    plot (line "y(x)" [take (20 * 10) $ zip xs ys])
+    plot (line "y(x)" [take (20 * 5) $ zip xs ys])
 

@@ -1,3 +1,4 @@
+module Main where
 --We need to solve y' = f(x, y), for example we take y' = x^2 - 2y
 --You need to enter x, y, such as f(x) = y, step, r
 
