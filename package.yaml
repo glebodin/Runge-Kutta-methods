@@ -5,10 +5,11 @@ dependencies:
 - base >= 4.7 && < 5
 - Chart
 - Chart-diagrams
+- Chart-cairo
 
 executables:
-  Runge-Kutta-method:
-    main:                Main.hs
+  Runge-Kutta:
+    main:                Runge-Kutta.hs
     source-dirs:         app
     ghc-options:
     - -threaded
