@@ -7,6 +7,9 @@ dependencies:
 - Chart-diagrams
 - Chart-cairo
 
+library:
+  source-dirs: src
+
 executables:
   Runge-Kutta:
     main:                Main.hs
@@ -15,6 +18,8 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    dependencies:
+    - Runge-Kutta
   Euler:
     main:                Main.hs
     source-dirs:         Euler
