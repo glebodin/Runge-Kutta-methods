@@ -4,11 +4,14 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{graphicx}
+\graphicspath{{}}
 
 \usetheme{default}
 
 \newcommand{\diff}{\mathrm{d}}
 \DeclareMathOperator{\grad}{grad}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 \title{Методы Рунге-Кутта}
 \author{Залялов Александр, Лобанов Глеб, Солодовников Никита, \\ группа 183}
@@ -71,5 +74,32 @@
 	\[y \approx y_0 + hy' + \frac{h^2}{2}y'' + \frac{h^3}{6}y^{(3)} + \frac{h^4}{24}y^{(4)}. \]
 
 \end{frame}
+
+\begin{frame}{Ответ на систему}
+    \includegraphics[scale=0.38]{solution}
+\end{frame}
+
+\begin{frame}{Сравнение методов : Метод Рунге-Кутта при делении отрезка на 1000 частей}
+    \includegraphics[scale=0.38]{runge1000}
+\end{frame}
+
+
+\begin{frame}{Сравнение методов : Метод Рунге-Кутта при делении отрезка на 50 частей}
+	\includegraphics[scale=0.38]{runge50}
+\end{frame}
+
+\begin{frame}{Сравнение методов : Метод Эйлера при делении отрезка на 1000 частей}
+    \includegraphics[scale=0.38]{euler}
+\end{frame}
+
+\begin{frame}{Анализ графиков}
+    \begin{enumerate} 
+        \item Как мы можем видеть метод Рунге-Кутта дает решение почти неотличимое от настоящего при достаточно маленьком размере шага.
+        \item Метод Эйлера, который является методом 2 порядка, дает хорошие графики только при достаточно маленьком шаге(можно сравнить вывод метода Рунге-Кутта при 50 точках и Эйлера при 1000). Это объясняется тем, что метод Рунге-Кутта имеет больший порядок точности.
+    \end{enumerate}
+\end{frame}
+
+
+
 
 \end{document}
