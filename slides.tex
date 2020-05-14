@@ -29,7 +29,9 @@
 		\frac{\diff y_n}{\diff t} = f_n(y_1, \ldots, y_n)
 	\end{cases} \]
 	где $y_1, \ldots, y_n$ ---~ функции от $t$. В векторной форме:
-	\[\grad \vec{y} = f(\vec{y}) \]
+	\[\frac{D\vec{y}}{D t} = f(\vec{y}) \]
+	где $\vec{y}:\mathbb{R} \to \mathbb{R}^n, f:\mathbb{R}^n \to \mathbb{R}^n$.
+
 	Предполагаем известным начальное условие $\vec{y}(t_0) = \vec{y_0}$.
 \end{frame}
 
@@ -41,6 +43,12 @@
 		\item<1-> $K, a_{ij}, b_i$ ---~ заранее фиксированные константы.
 		\item<2-> В явных методах $a_{ij} = 0$ при $j \ge i$.
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Метод Эйлера}
+\[ K = 1; \]
+\[ a = \begin{pmatrix} 0 \end{pmatrix}; \]
+\[ b = \begin{pmatrix} 1 \end{pmatrix}; \]
 \end{frame}
 
 \begin{frame}{RK4}
