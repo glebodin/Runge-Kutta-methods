@@ -4,11 +4,14 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{graphicx}
+\graphicspath{{}}
 
 \usetheme{default}
 
 \newcommand{\diff}{\mathrm{d}}
 \DeclareMathOperator{\grad}{grad}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 \title{Методы Рунге-Кутта}
 \author{Залялов Александр, Лобанов Глеб, Солодовников Никита, \\ группа 183}
@@ -71,5 +74,23 @@
 	\[y \approx y_0 + hy' + \frac{h^2}{2}y'' + \frac{h^3}{6}y^{(3)} + \frac{h^4}{24}y^{(4)}. \]
 
 \end{frame}
+
+\begin{frame}{Сравнение методов : Ответ на систему}
+    \includegraphics[scale=0.40]{solution}
+\end{frame}
+
+\begin{frame}{Сравнение методов}
+    \includegraphics[scale=0.17]{runge1000}
+\end{frame}
+
+
+\begin{frame}{Сравнение методов}
+	\includegraphics[scale=0.17]{runge50}
+\end{frame}
+\begin{frame}{Сравнение методов}
+    \includegraphics[scale=0.4]{euler}
+\end{frame}
+
+
 
 \end{document}
