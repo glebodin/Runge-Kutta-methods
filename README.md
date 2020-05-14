@@ -1,1 +1,1 @@
-$A - \lambdaE$
+$$A - \lambdaE$$
