@@ -1,1 +1,1 @@
-<a href="https://www.codecogs.com/eqnedit.php?latex=A&space;-&space;\lambda&space;E" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;-&space;\lambda&space;E" title="A - \lambda E" /></a>
+<a href="t.me/applicative_memes" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;-&space;\lambda&space;E" title="A - \lambda E" /></a>
