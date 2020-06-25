@@ -47,3 +47,4 @@ main = toFile def "euler.png" $ do
     let hs1 = get sol1 2
     plotLeft (line "y(x)" [zip xs0 ys0, zip xs1 ys1])
     plotRight (line "h(x)" [zip xs0 hs0, zip xs1 hs1])
+
